@@ -250,12 +250,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         #search-input {
             width: 70%;
-            padding: 12px;
+            /* Remove custom padding and min-height for floating label compatibility */
             font-size: 16px;
             border: 2px solid #e9ecef;
             border-radius: 6px;
             margin-right: 10px;
             transition: border-color 0.3s ease;
+            height: auto;
         }
         
         #search-input:focus {
