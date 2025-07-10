@@ -62,6 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    const searchForm = searchInput.closest('form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = searchInput.value;
+            performSearch(query);
+        });
+    }
+
     // Dynamic validation system
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
